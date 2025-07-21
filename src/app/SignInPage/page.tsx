@@ -1,16 +1,22 @@
+"use client";
 import { SignIn, useUser } from "@clerk/nextjs";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import React, { useEffect } from "react";
 
 export default function SignInPage() {
-  const { user } = useUser();
+  const { user, isLoaded } = useUser();
   const router = useRouter();
+  const redirectUrl = process.env.NEXT_PUBLIC_CLERK_SIGN_IN_FORCE_REDIRECT_URL || "/dashboard";
+
   useEffect(() => {
-    if (user) {
-      router.push("/sign-in?redirect_url=/dashboard");
+    if (isLoaded && user) {
+      router.replace(redirectUrl);
     }
-  }, [user]);
-  return (
-    <SignIn />
-  );
+  }, [isLoaded, user, redirectUrl, router]);
+
+  if (isLoaded && user) {
+    return null;
+  }
+
+  return <SignIn />;
 }

@@ -11,7 +11,7 @@ export default function MealPlannerDetails({ dayOfWeek }: Props) {
     setCollapsed(!collapsed);
   };
   return (
-    <div className="border-b p-4 max-w-5xl mx-auto">
+    <div className="border-b p-4 w-full">
       <div className="flex items-center justify-between">
         <h2 className="text-3xl  p-3 text-bold text-sky-200 w-120">{dayOfWeek}</h2>
         <button
