@@ -43,6 +43,24 @@ export default function Home() {
             Hamburger icons created by azmianshori - Flaticon
           </a>
           <a
+            href="https://www.flaticon.com/free-icons/recipe"
+            title="recipe icons"
+          >
+            Recipe icons created by Freepik - Flaticon
+          </a>
+          <a
+            href="https://www.flaticon.com/free-icons/nutritionist"
+            title="nutritionist icons"
+          >
+            Nutritionist icons created by Freepik - Flaticon
+          </a>
+          <a
+            href="https://www.flaticon.com/free-icons/dashboard"
+            title="dashboard icons"
+          >
+            Dashboard icons created by Pixel perfect - Flaticon
+          </a>
+          <a
             className="flex items-center gap-2 hover:underline hover:underline-offset-4"
             href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
             target="_blank"
